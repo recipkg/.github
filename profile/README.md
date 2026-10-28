@@ -32,20 +32,22 @@
 | [三层递归示例](https://github.com/recipkg/recipkg/tree/main/examples) | `hello → greeting → text-rules`，完整材料如何随包交付 |
 | [Recipkg 自举配方](https://github.com/recipkg/recipkg/tree/main/recipes/recipkg) | 用公开行为、协议和验收条件描述 Recipkg 自身 |
 | [软件质量配方](https://github.com/recipkg/recipkg/tree/main/recipes/software-quality) | 可复用的设计、代码质量与性能要求 |
-| [迁移技能](https://github.com/recipkg/recipkg/blob/main/recipes/recipkg/skills/migrate-to-recipkg/SKILL.md) | 将现有软件整理为 Recipkg 配方的 Agent 工作流程 |
-| [重写技能](https://github.com/recipkg/recipkg/blob/main/recipes/recipkg/skills/rewrite-to-recipkg/SKILL.md) | 观察软件、提取配方、建立规范仓库并重写验收 |
-| [测试反馈技能](https://github.com/recipkg/recipkg/blob/main/recipes/recipkg/skills/test-feedback/SKILL.md) | 实际体验与端到端测试，结合 issue 生成可验收需求 |
+| [迁移技能](https://github.com/recipkg/migrate-to-recipkg) | 将现有软件整理为 Recipkg 配方的 Agent 工作流程 |
+| [重写技能](https://github.com/recipkg/rewrite-to-recipkg) | 观察软件、提取配方、建立规范仓库并重写验收 |
+| [测试反馈技能](https://github.com/recipkg/test-feedback) | 实际体验与端到端测试，结合 issue 生成可验收需求 |
+
+11 个项目技能各有独立仓库，通过固定提交的 Git 子模块复用；参见 [技能清单](https://github.com/recipkg/recipkg/blob/main/docs/SKILLS.md)。CLI 源码也独立保存在 [cli-source](https://github.com/recipkg/cli-source)，主仓库以 `generated/cli-source/` 子模块引用。
 
 ## 跑通第一个配方
 
 当前参考 CLI 需要 Python 3.11+，运行时仅依赖标准库；获取 Git 配方来源时需要系统 Git。
 
 ```sh
-git clone https://github.com/recipkg/recipkg.git
+git clone --recurse-submodules https://github.com/recipkg/recipkg.git
 cd recipkg
 python3 -m venv .venv
 . .venv/bin/activate
-python3 -m pip install ./generated
+python3 -m pip install ./generated/cli-source
 recipkg check examples/hello
 recipkg pack examples/hello -o hello-0.1.0.recipe.tar.gz
 recipkg build hello-0.1.0.recipe.tar.gz --output hello-build.md
