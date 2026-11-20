@@ -36,7 +36,7 @@
 | [重写技能](https://github.com/recipkg/rewrite-to-recipkg) | 观察软件、提取配方、建立规范仓库并重写验收 |
 | [测试反馈技能](https://github.com/recipkg/test-feedback) | 实际体验与端到端测试，结合 issue 生成可验收需求 |
 
-11 个项目技能各有独立仓库，通过固定提交的 Git 子模块复用；参见 [技能清单](https://github.com/recipkg/recipkg/blob/main/docs/SKILLS.md)。CLI 源码也独立保存在 [cli-source](https://github.com/recipkg/cli-source)，主仓库以 `generated/cli-source/` 子模块引用。
+12 个项目技能各有独立仓库，通过固定提交的 Git 子模块复用；参见 [技能清单](https://github.com/recipkg/recipkg/blob/main/docs/SKILLS.md)。CLI 源码也独立保存在 [cli-source](https://github.com/recipkg/cli-source)，主仓库以 `generated/cli-source/` 子模块引用。
 
 ## 跑通第一个配方
 
