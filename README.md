@@ -4,6 +4,7 @@
 
 - [`profile/README.md`](profile/README.md)：显示在组织主页上的中英介绍与项目入口。
 - [`recipkg/recipkg`](https://github.com/recipkg/recipkg)：CLI、配方协议、迁移技能、示例和测试的主仓库。
+- [实测进度与验证边界](https://github.com/recipkg/recipkg/blob/main/docs/PROGRESS.md)：独立本地测试证据，不代表完整发布验收。
 
 修改组织介绍时编辑 `profile/README.md`。命令、格式和安装方式以主仓库为准；功能变更、问题反馈和配方贡献请前往主仓库。
 

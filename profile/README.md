@@ -38,6 +38,8 @@
 
 12 个项目技能各有独立仓库，通过固定提交的 Git 子模块复用；参见 [技能清单](https://github.com/recipkg/recipkg/blob/main/docs/SKILLS.md)。CLI 源码也独立保存在 [cli-source](https://github.com/recipkg/cli-source)，主仓库以 `generated/cli-source/` 子模块引用。
 
+[核对记录（2026-11-20）](https://github.com/recipkg/recipkg/blob/main/docs/PROGRESS.md)：本地确认 12 个技能子模块、3 个 CLI 内置技能和 58 项单元测试通过；这并非跨平台重建或发布验收。
+
 ## 跑通第一个配方
 
 当前参考 CLI 需要 Python 3.11+，运行时仅依赖标准库；获取 Git 配方来源时需要系统 Git。
@@ -69,4 +71,4 @@ Recipkg packages software requirements, interfaces, recursive dependencies, and 
 
 The current CLI renders prompts and manages recipe packages and Agent Skills. Your chosen agent performs the implementation; observable acceptance checks establish what was actually rebuilt.
 
-Read the [English guide](https://github.com/recipkg/recipkg/blob/main/README.en.md), explore the [examples](https://github.com/recipkg/recipkg/tree/main/examples), or help improve the [specification](https://github.com/recipkg/recipkg/blob/main/docs/SPEC.md).
+Read the [English guide](https://github.com/recipkg/recipkg/blob/main/README.en.md), explore the [examples](https://github.com/recipkg/recipkg/tree/main/examples), or help improve the [specification](https://github.com/recipkg/recipkg/blob/main/docs/SPEC.md). The [2026-11-20 verification record](https://github.com/recipkg/recipkg/blob/main/docs/PROGRESS.md) distinguishes local unit tests from unverified cross-platform reconstruction.
